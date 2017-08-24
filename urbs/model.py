@@ -959,7 +959,8 @@ def res_transmission_symmetry_rule(m, sin, sout, tra, com):
 # - retrieved energy / output efficiency
 def def_storage_state_rule(m, t, sit, sto, com):
     return (m.e_sto_con[t, sit, sto, com] ==
-            m.e_sto_con[t-1, sit, sto, com] +
+            m.e_sto_con[t-1, sit, sto, com]*
+	    m.storage.loc[sit, sto, com]['SelfDisc'] * m.dt +
             m.e_sto_in[t, sit, sto, com] *
             m.storage.loc[sit, sto, com]['eff-in'] * m.dt -
             m.e_sto_out[t, sit, sto, com] /
