@@ -108,8 +108,8 @@ if __name__ == '__main__':
 
     # plotting commodities/sites
     plot_tuples = [
-        ('EIT', 'HeatLow35°'),
-        ('EIT', 'HeatLow45°')
+        ('EIT', 'HeatLow35'),
+        ('EIT', 'HeatLow45')
         
     ]
 
