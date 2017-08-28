@@ -108,7 +108,7 @@ if __name__ == '__main__':
 
     # plotting commodities/sites
     plot_tuples = [
-        ('CampWest', 'Heat'),
+        ('CampWest', 'Elec'),
         ('EIT', 'Heat')
         
     ]
@@ -136,10 +136,10 @@ if __name__ == '__main__':
     # select scenarios to be run
     scenarios = [
                  cb.scenario_base,
-                 cb.scen_CO2limit(40000),
-                 cb.scen_1proprop('Campus', 'PVS30', 'inv-cost', 600000),
-                 cb.scen_2stoprop('Campus', 'Campus', 'Battery', 'Reservoir',
-                 'Elec', 'Heat', 'eff-in', 'discharge', 0.9, 0.9999)
+                 #cb.scen_CO2limit(40000),
+                #cb.scen_1proprop('Campus', 'PVS30', 'inv-cost', 600000),
+                 #cb.scen_2stoprop('Campus', 'Campus', 'Battery', 'Reservoir',
+                 #'Elec', 'Heat', 'eff-in', 'discharge', 0.9, 0.9999)
                  ]
 
     for scenario in scenarios:
