@@ -109,13 +109,13 @@ if __name__ == '__main__':
     # plotting commodities/sites
     plot_tuples = [
         ('CampWest', 'Elec'),
-        ('EIT', 'Heat')
+        ('EIT', 'Heat70°')
         
     ]
 
     # detailed reporting commodity/sites
     report_tuples = [
-                ('CampWest', 'Heat'),('EIT', 'Heat')]
+                ('CampWest', 'Elec'),('EIT', 'Heat70°')]
 
     # plotting timesteps
     plot_periods = {
