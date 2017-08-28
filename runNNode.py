@@ -108,14 +108,14 @@ if __name__ == '__main__':
 
     # plotting commodities/sites
     plot_tuples = [
-        ('Campus', 'Elec'),
-        ('Campus', 'Elec'),
-        ('EIT', 'Cold')
+        ('EIT', 'HeatLow35°'),
+        ('EIT', 'HeatLow45°')
+        
     ]
 
     # detailed reporting commodity/sites
     report_tuples = [
-        ('Campus', 'Elec'), ('Campus', 'Elec'), ('EIT', 'Cold')]
+        ('EIT', 'HeatLow35°'), ('EIT', 'HeatLow45°')]
 
     # plotting timesteps
     plot_periods = {
@@ -127,9 +127,9 @@ if __name__ == '__main__':
 
     # add or change plot colors
     my_colors = {
-        'South': (230, 200, 200),
-        'Mid': (200, 230, 200),
-        'North': (200, 200, 230)}
+        'HeatLow35°': (230, 200, 200),
+        'HeatLow45°: (200, 230, 200)
+        }
     for country, color in my_colors.items():
         urbs.COLORS[country] = color
 
