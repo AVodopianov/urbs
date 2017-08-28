@@ -98,7 +98,7 @@ def run_scenario(input_file, timesteps, scenario, result_dir,
     return prob
 
 if __name__ == '__main__':
-    input_file = 'NNode.xlsx'
+    input_file = '1Node.xlsx'
     result_name = os.path.splitext(input_file)[0]  # cut away file extension
     result_dir = prepare_result_directory(result_name)  # name + time stamp
 
@@ -108,14 +108,14 @@ if __name__ == '__main__':
 
     # plotting commodities/sites
     plot_tuples = [
-        ('CampWest','Elec'),
-        ('EIT', 'Heat70°')
-        
+        ('Campus', 'Elec'),
+        ('Campus', 'Elec'),
+        ('EIT', 'Cold')
     ]
 
     # detailed reporting commodity/sites
     report_tuples = [
-                ('CampWest', 'Elec'),('EIT', 'Heat70°')]
+        ('Campus', 'Elec'), ('Campus', 'Elec'), ('EIT', 'Cold')]
 
     # plotting timesteps
     plot_periods = {
@@ -136,10 +136,10 @@ if __name__ == '__main__':
     # select scenarios to be run
     scenarios = [
                  cb.scenario_base,
-                 #cb.scen_CO2limit(40000),
-                #cb.scen_1proprop('Campus', 'PVS30', 'inv-cost', 600000),
-                 #cb.scen_2stoprop('Campus', 'Campus', 'Battery', 'Reservoir',
-                 #'Elec', 'Heat', 'eff-in', 'discharge', 0.9, 0.9999)
+                # cb.scen_CO2limit(40000),
+                 #cb.scen_1proprop('Campus', 'PVS30', 'inv-cost', 600000),
+                # cb.scen_2stoprop('Campus', 'Campus', 'Battery', 'Reservoir',
+                # 'Elec', 'Heat', 'eff-in', 'discharge', 0.9, 0.9999)
                  ]
 
     for scenario in scenarios:
