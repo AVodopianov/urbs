@@ -79,7 +79,7 @@ def run_scenario(input_file, timesteps, scenario, result_dir,
     shutil.copyfile(input_file, os.path.join(result_dir, input_file))
     
     # save problem solution (and input data) to HDF5 file
-    # urbs.save(prob, os.path.join(result_dir, '{}.h5'.format(sce)))
+    urbs.save(prob, os.path.join(result_dir, '{}.h5'.format(sce)))
 
     # write report to spreadsheet
     urbs.report(
