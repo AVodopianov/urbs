@@ -108,14 +108,14 @@ if __name__ == '__main__':
 
     # plotting commodities/sites
     plot_tuples = [
-        ('EIT', 'HeatLow35'),
-        ('EIT', 'HeatLow45')
-        
+        ('Campus', 'Elec'),
+        ('Campus', 'Heat'),
+        ('Campus', 'Cold')
     ]
 
     # detailed reporting commodity/sites
     report_tuples = [
-        ('EIT', 'HeatLow35'), ('EIT', 'HeatLow45')]
+        ('Campus', 'Elec'), ('Campus', 'Heat'), ('Campus', 'Cold')]
 
     # plotting timesteps
     plot_periods = {
@@ -123,13 +123,13 @@ if __name__ == '__main__':
         'sum': range(3000, 3000+24*7),
         'aut': range(5000, 5000+24*7),
         'win': range(7000, 7000+24*7)
-        }
+    }
 
     # add or change plot colors
     my_colors = {
-        'HeatLow35': (230, 200, 200),
-        'HeatLow45': (200, 230, 200)
-        }
+        'Elec': (230, 200, 200),
+        'Heat': (200, 230, 200),
+        'Cold': (200, 200, 230)}
     for country, color in my_colors.items():
         urbs.COLORS[country] = color
 
@@ -137,10 +137,10 @@ if __name__ == '__main__':
     scenarios = [
                  cb.scenario_base,
                 # cb.scen_CO2limit(40000),
-                 #cb.scen_1proprop('Campus', 'PVS30', 'inv-cost', 600000),
+                # cb.scen_1proprop('Campus', 'PVS30', 'inv-cost', 600000),
                 # cb.scen_2stoprop('Campus', 'Campus', 'Battery', 'Reservoir',
                 # 'Elec', 'Heat', 'eff-in', 'discharge', 0.9, 0.9999)
-                 ]
+    ]
 
     for scenario in scenarios:
         prob = run_scenario(input_file, timesteps, scenario, result_dir,
