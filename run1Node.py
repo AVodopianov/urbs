@@ -127,19 +127,19 @@ if __name__ == '__main__':
 
     # add or change plot colors
     my_colors = {
-        'South': (230, 200, 200),
-        'Mid': (200, 230, 200),
-        'North': (200, 200, 230)}
+        'Elec': (230, 200, 200),
+        'Heat': (200, 230, 200),
+        'Cold': (200, 200, 230)}
     for country, color in my_colors.items():
         urbs.COLORS[country] = color
 
     # select scenarios to be run
     scenarios = [
                  cb.scenario_base,
-                 cb.scen_CO2limit(40000),
-                 cb.scen_1proprop('Campus', 'PVS30', 'inv-cost', 600000),
-                 cb.scen_2stoprop('Campus', 'Campus', 'Battery', 'Reservoir',
-                 'Elec', 'Heat', 'eff-in', 'discharge', 0.9, 0.9999)
+                # cb.scen_CO2limit(40000),
+                # cb.scen_1proprop('Campus', 'PVS30', 'inv-cost', 600000),
+                # cb.scen_2stoprop('Campus', 'Campus', 'Battery', 'Reservoir',
+                # 'Elec', 'Heat', 'eff-in', 'discharge', 0.9, 0.9999)
     ]
 
     for scenario in scenarios:
