@@ -1,0 +1,10 @@
+
+Gurobi 7.0.2 (win64, Python) logging started 08/29/17 09:31:51
+
+
+Gurobi 7.0.2 (win64, Python) logging started 08/29/17 09:42:47
+
+Error reading LP format file C:\Users\gu74duv\AppData\Local\Temp\tmpsqh5huvw.pyomo.lp at line 3051692
+Malformed term in expression
+Neighboring tokens: " nan x446734 = 0 c_u_x5982501_: -1 x446718 "
+

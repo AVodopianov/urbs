@@ -119,10 +119,11 @@ if __name__ == '__main__':
 
     # plotting timesteps
     plot_periods = {
-        'spr': range(1000, 1000+24*7),
-        'sum': range(3000, 3000+24*7),
-        'aut': range(5000, 5000+24*7),
-        'win': range(7000, 7000+24*7)
+       'tst': range(1, 24*7),
+	   # 'spr': range(1000, 1000+24*7),
+       # 'sum': range(3000, 3000+24*7),
+       #'aut': range(5000, 5000+24*7),
+       # 'win': range(7000, 7000+24*7)
     }
 
     # add or change plot colors
