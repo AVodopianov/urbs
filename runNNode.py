@@ -103,26 +103,27 @@ if __name__ == '__main__':
     result_dir = prepare_result_directory(result_name)  # name + time stamp
 
     # simulation timesteps
-    (offset, length) = (1, 8759)  # time step selection
+    (offset, length) = (1000, 168)  # time step selection
     timesteps = range(offset, offset+length+1)
 
     # plotting commodities/sites
     plot_tuples = [
         ('Campus', 'Elec'),
         ('Campus', 'Heat'),
-        ('Campus', 'Cold')
+		('CampWest', 'Heat')
     ]
 
     # detailed reporting commodity/sites
     report_tuples = [
-        ('Campus', 'Elec'), ('Campus', 'Heat'), ('Campus', 'Cold')]
+        ('Campus', 'Elec'), ('Campus', 'Heat'),('CampWest', 'Heat')]
 
     # plotting timesteps
     plot_periods = {
-        'spr': range(1000, 1000+24*7),
-        'sum': range(3000, 3000+24*7),
-        'aut': range(5000, 5000+24*7),
-        'win': range(7000, 7000+24*7)
+		'tst': range(1000, 1000+24*7),
+		#'spr': range(1000, 1000+24*7),
+        #'sum': range(3000, 3000+24*7),
+        #'aut': range(5000, 5000+24*7),
+        #'win': range(7000, 7000+24*7)
     }
 
     # add or change plot colors
